@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <form action="Home/NewSale" method="post">
+        <div>Products</div>
+        <select>
+            @foreach (var product in ViewBag.Products)
+            {
+                <option value="@product.ProductId">@product.Description</option>
+
+            }
+
+
+        </select>
+        <div>Clients</div>
+
+        <select>
+            @foreach (var client in ViewBag.Clients)
+            {
+                <option value="@client.ClientId">@client.Name</option>
+
+            }
+
+
+        </select>
+        <br />
+        <input type="number" id="quantity" name="txtQuantity" value="" />
+        <br />
+        <input type="submit" name="btnAddSale" value="Add a new sale" />
+
+    </form>
