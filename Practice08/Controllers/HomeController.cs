@@ -46,6 +46,27 @@ namespace Practice08.Controllers
             return Content(DateTime.Today.ToString(),"text/html");
         }
 
+        /*Returning Json */
+
+            /*when you use Get method, it generates a error like below*/
+        public JsonResult GetJsonError()
+        {
+            ServiceProduct serviceProduct = new ServiceProduct();
+            var Products = serviceProduct.getProducts();
+            return Json(Products);
+                
+        }
+        /* Normally you have to get the json information with Post method*/
+        /* but if you want to get with Get method you have to allow*/
+        public JsonResult GetJson()
+        {
+            ServiceProduct serviceProduct = new ServiceProduct();
+            var Products = serviceProduct.getProducts();
+
+
+            return Json(Products, JsonRequestBehavior.AllowGet /*Get Method Allowed*/ );
+        }
+
        
     }
 }
