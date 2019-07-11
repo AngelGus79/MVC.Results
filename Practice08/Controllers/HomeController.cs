@@ -12,10 +12,10 @@ namespace Practice08.Controllers
         // GET: Home
         public ViewResult Sales()
         {
-            
+
 
             /*Products*/
-            
+
             ServiceProduct serviceProduct = new ServiceProduct();
             var Products = serviceProduct.getProducts();
             ViewBag.Products = Products;
@@ -29,8 +29,23 @@ namespace Practice08.Controllers
 
             return View();
         }
-        
-        
 
+        /*returning a string*/
+        public ContentResult PrintName(string Name)
+        {
+            return Content(Name);
+        }
+
+        public ContentResult PrintAge()
+        {
+            return Content("The Age is: <h1>4</h1>");
+        }
+
+        public ContentResult PrintDate()
+        {
+            return Content(DateTime.Today.ToString(),"text/html");
+        }
+
+       
     }
 }
