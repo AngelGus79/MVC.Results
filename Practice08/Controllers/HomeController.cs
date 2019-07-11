@@ -79,5 +79,11 @@ namespace Practice08.Controllers
         {
             return RedirectToAction("GetJson");
         }
+
+        /*Redirect Route*/
+        public RedirectToRouteResult Redirect2Route()
+        {
+            return RedirectToRoute("JsonRoute");
+        }
     }
 }
