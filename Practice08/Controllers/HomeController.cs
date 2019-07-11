@@ -85,5 +85,22 @@ namespace Practice08.Controllers
         {
             return RedirectToRoute("JsonRoute");
         }
+
+        /* returning Http status code result */
+
+        public HttpStatusCodeResult ServerError()
+        {
+            return new HttpStatusCodeResult(505);
+        }
+
+        public HttpStatusCodeResult ResourceNoFound()
+        {
+            return new HttpStatusCodeResult(404);
+        }
+
+        public HttpStatusCodeResult Redirecting()
+        {
+            return new HttpStatusCodeResult(303);
+        }
     }
 }
