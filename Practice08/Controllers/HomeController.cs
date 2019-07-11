@@ -12,7 +12,7 @@ namespace Practice08.Controllers
         // GET: Home
         public ViewResult Sales()
         {
-
+            /**/
 
             /*Products*/
             
