@@ -67,6 +67,17 @@ namespace Practice08.Controllers
             return Json(Products, JsonRequestBehavior.AllowGet /*Get Method Allowed*/ );
         }
 
+        /*Redirecting to a google*/
+
+        public RedirectResult GetGoogle()
+        {
+            return Redirect("https://www.google.com");
+        }
        
+        /*Redirecting to another Action*/
+        public RedirectToRouteResult Redirect2Action()
+        {
+            return RedirectToAction("GetJson");
+        }
     }
 }
