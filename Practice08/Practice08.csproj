@@ -113,7 +113,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\QueryString.cshtml" />
     <Content Include="Views\Home\QueryStringInt.cshtml" />
-    <Content Include="Views\PostMethod.cshtml" />
+    <Content Include="Views\Home\PostMethod.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

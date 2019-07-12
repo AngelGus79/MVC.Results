@@ -127,5 +127,17 @@ namespace Practice08.Controllers
             return View();
         }
 
+        /*Post method*/
+        public ViewResult PostMethod()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult PostMethod(int Age)
+        {
+            ViewBag.Age = Age;
+            return View();
+        }
     }
 }
