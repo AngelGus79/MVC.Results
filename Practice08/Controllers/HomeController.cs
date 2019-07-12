@@ -110,5 +110,22 @@ namespace Practice08.Controllers
             var ruta = Server.MapPath("~/cv.pdf");
             return File(ruta, "application/pdf");
         }
+
+        /*Query strings*/
+        /*If you do not write any query, there is no problem because string type accept null*/
+        public ViewResult QueryString(string title)
+        {
+            ViewBag.String = title;
+            return View();
+        }
+
+        /*If you do not write any query, there is PROBLEM because int type does not accept null value*/
+
+        public ViewResult QueryStringInt(int Age)
+        {
+            ViewBag.Age = Age;
+            return View();
+        }
+
     }
 }
