@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="cv.pdf" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Sales.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />

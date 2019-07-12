@@ -102,5 +102,13 @@ namespace Practice08.Controllers
         {
             return new HttpStatusCodeResult(303);
         }
+
+        /*Returning a File*/
+
+        public FileResult GetPDF()
+        {
+            var ruta = Server.MapPath("~/cv.pdf");
+            return File(ruta, "application/pdf");
+        }
     }
 }
