@@ -139,5 +139,18 @@ namespace Practice08.Controllers
             ViewBag.Age = Age;
             return View();
         }
+        [HttpPost]
+        public ViewResult PostMethodName(string Name)
+        {
+            ViewBag.Name = Name;
+            return View();
+            
+        }
+        
+        public ViewResult PostMethodName()
+        {
+            return View();
+
+        }
     }
 }

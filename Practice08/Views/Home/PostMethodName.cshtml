@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "PostMethodName";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h1>@ViewBag.Name</h1>
+<h2>PostMethodName</h2>
+
+<form action="/Home/PostMethodName" method="post">
+    <input type="text" name="name" id="Name" value="Name" />
+    <input type="submit" name="name" id="Name" value="Send a Name" />
+</form>
+
