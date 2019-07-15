@@ -1,0 +1,12 @@
+﻿@model Practice08.Models.Product
+@{
+    ViewBag.Title = "ActionLink";
+    Layout = "~/Views/Shared/_myLayout.cshtml";
+}
+
+<h2>ActionLink</h2>
+<div>@Model.ProductId</div>
+<div>@Model.Description</div>
+<div>@Model.Price.ToString("c")</div>
+<div>@Model.InStock</div>
+
