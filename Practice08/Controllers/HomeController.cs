@@ -142,15 +142,20 @@ namespace Practice08.Controllers
         [HttpPost]
         public ViewResult PostMethodName(string Name)
         {
+            ServiceProduct ServiceProducts = new ServiceProduct();
+            var products = ServiceProducts.getProducts();
             ViewBag.Name = Name;
-            return View();
+            return View(products);
             
         }
         
         public ViewResult PostMethodName()
         {
-            return View();
-
+            ServiceProduct ServiceProducts = new ServiceProduct();
+            var products = ServiceProducts.getProducts();
+          
+            return View(products);
         }
+
     }
 }

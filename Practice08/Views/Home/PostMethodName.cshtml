@@ -1,14 +1,42 @@
-﻿
+﻿@model List<Practice08.Models.Product>
 @{
     ViewBag.Title = "PostMethodName";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <h1>@ViewBag.Name</h1>
-<h2>PostMethodName</h2>
+<h1>@ViewBag.Name</h1>
+<h2>Products</h2>
+
+<table class="table">
+    <thead >
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Price</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var product in Model)
+        {
+            string InStockClass = product.InStock ? string.Empty : "bg-danger";
+            <tr class="@InStockClass">
+                <td>@product.ProductId</td>
+                @*Try not using Raw*@
+                <td>@Html.Raw(product.Description)</td>
+                <td>@product.Price.ToString("c")</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
 
 <form action="/Home/PostMethodName" method="post">
     <input type="text" name="name" id="Name" value="Name" />
     <input type="submit" name="name" id="Name" value="Send a Name" />
 </form>
+
+
 

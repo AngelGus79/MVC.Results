@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <div>
+        @Html.ActionLink("Post Method","PostMethod","Home",null,new { @class = "btn btn-success" })
+        @Html.ActionLink("Post Method Name","PostMethodName","Home", null, new {@class = "btn btn-success"})
+        @Html.ActionLink("Get a product", "GetProduct", new { ProductId = 1 }, new { @class = "btn btn-danger" })
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

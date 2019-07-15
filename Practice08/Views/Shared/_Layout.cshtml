@@ -2,20 +2,28 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE =edge">
+    <meta name="viewport" content="width =device-width, initial-scale=1">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div>This is The Layout</div>
-    <div>@Html.ActionLink("Return Name","PrintName","Home")</div>
-    <div>@Html.ActionLink("Error","ServerError")</div>
-    <div>@Html.ActionLink("Resource No Found","ResourceNoFound")</div>
-    <div>@Html.ActionLink("Redirecting","Redirecting")</div>
+    <div class="btn-danger">@Html.ActionLink("Return Name", "PrintName", "Home")</div>
+    <div>@Html.ActionLink("Error", "ServerError")</div>
+    <div>@Html.ActionLink("Resource No Found", "ResourceNoFound")</div>
+    <div>@Html.ActionLink("Redirecting", "Redirecting")</div>
     <div>@Html.ActionLink("Query String", "QueryString")</div>
     <div>@Html.ActionLink("Query String Int", "QueryStringInt")</div>
     <div>@Html.ActionLink("PostMethod", "PostMethod")</div>
+    <div>@Html.ActionLink("Get Item","GetProduct","Example",new { ProductId = 1 }, new { @class = "btn btn-success" })</div>
     <div>
         @RenderBody()
     </div>
+    <script src="~/js/jquery-3.4.1.min.js" ></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>
