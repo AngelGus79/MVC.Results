@@ -28,9 +28,21 @@ namespace Practice08.Models
         {
 
             var product = (from p in Products.Products
-                          where p.ProductId == ProductId
-                          select p).FirstOrDefault();
+                           where p.ProductId == ProductId
+                           select p).FirstOrDefault();
             return View(product);
         }
+
+        /*The decorator  ChildActionOnly obliges that the action to be called eather RenderAction or Action methods
+         If you try to call the Action by url an error will appeare*/
+        [ChildActionOnly]
+        public ViewResult GetProducts()
+        {
+            
+            return View(Products.getProducts());
+        }
+
+
+        
     }
 }

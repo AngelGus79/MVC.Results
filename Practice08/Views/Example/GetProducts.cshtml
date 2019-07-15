@@ -1,0 +1,33 @@
+﻿@model List<Practice08.Models.Product>
+@{
+    ViewBag.Title = "GetProducts";
+    Layout = null;
+}
+
+<h2>GetProducts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>InStock</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach(var product in Model)
+    {
+        var strInStock = product.InStock ? "Yes" : "No";
+        <tr>
+            <td>@product.ProductId </td>
+            <td>@product.Description </td>
+            <td>@product.Price.ToString("c") </td>
+            <td>@strInStock</td>
+        </tr>
+    }
+        </tbody>
+    
+</table>
+
+

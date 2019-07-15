@@ -140,6 +140,7 @@
     <Content Include="Views\Home\PostMethodName.cshtml" />
     <Content Include="Views\Shared\_myLayout.cshtml" />
     <Content Include="Views\Example\GetProduct.cshtml" />
+    <Content Include="Views\Example\GetProducts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
