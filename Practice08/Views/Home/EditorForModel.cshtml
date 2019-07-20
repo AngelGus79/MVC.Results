@@ -1,0 +1,21 @@
+﻿@model Practice08.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditorForModel</title>
+</head>
+<body>
+   @using (@Html.BeginForm())
+   {
+       @Html.EditorForModel()
+    <input type="submit"   id="NewProduct" name="name" value="add a product" />
+   }
+
+</body>
+</html>

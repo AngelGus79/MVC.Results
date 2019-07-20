@@ -22,6 +22,18 @@ namespace Practice08.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult EditorForModel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult EditorForModel(Practice08.Models.Product Product)
+        {
+            return View();
+        }
+
         // GET: Home
         public ViewResult Sales()
         {
