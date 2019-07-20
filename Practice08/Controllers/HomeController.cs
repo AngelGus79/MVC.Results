@@ -157,5 +157,24 @@ namespace Practice08.Controllers
             return View(products);
         }
 
+        public ViewResult Display()
+        {
+            ServiceProduct ServiceProducts = new ServiceProduct();
+            var product = ServiceProducts.getProduct();
+
+            ViewBag.Properties = product;
+            return View();
+        }
+
+        public ViewResult Clients()
+        {
+            ServiceClient serviceClient = new ServiceClient();
+            var client = serviceClient.getClient();
+            ViewBag.Client = client;
+
+            return View();
+
+        }
+
     }
 }

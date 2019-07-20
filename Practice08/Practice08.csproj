@@ -141,6 +141,11 @@
     <Content Include="Views\Shared\_myLayout.cshtml" />
     <Content Include="Views\Example\GetProduct.cshtml" />
     <Content Include="Views\Example\GetProducts.cshtml" />
+    <Content Include="Views\Home\Display.cshtml" />
+    <Content Include="Views\Home\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Home\Clients.cshtml" />
+    <Content Include="Views\Home\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Home\DisplayTemplates\Client.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
