@@ -38,11 +38,29 @@ namespace Practice08.Models
         [ChildActionOnly]
         public ViewResult GetProducts()
         {
-            
+            ViewBag.ProductSelectList = GetProductSelectList();
             return View(Products.getProducts());
         }
 
+        public List<SelectListItem> GetProductSelectList()
+        {
+            ServiceProduct serviceProducts = new ServiceProduct();
+            var products = serviceProducts.getProducts();
+            List<SelectListItem> items = new List<SelectListItem>();
 
+            int index = 0;
+            foreach(var product in products)
+            {
+                items.Add(new SelectListItem
+                {
+                    Value = index.ToString(),
+                    Text = product.Description
+                });
+                index++;
+            }
+
+            return items;
+        }
         
     }
 }
