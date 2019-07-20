@@ -9,6 +9,19 @@ namespace Practice08.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
+        public ViewResult Index()
+        {
+            ViewBag.Title = "Index Page";
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult Index(Practice08.Models.Product Product )
+        {
+            return View();
+        }
+
         // GET: Home
         public ViewResult Sales()
         {

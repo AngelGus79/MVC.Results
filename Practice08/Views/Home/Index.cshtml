@@ -1,4 +1,4 @@
-﻿
+﻿@model Practice08.Models.Product
 @{
     Layout = null;
 }
@@ -11,6 +11,27 @@
     <title>Index</title>
 </head>
 <body>
-   
+    <h1>@ViewBag.Title</h1>
+
+    @using(Html.BeginForm())
+    {
+    <div>
+        @Html.LabelFor(Model => Model.ProductId)
+        @Html.EditorFor(Model => Model.ProductId)
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.Description)
+        @Html.EditorFor(Model => Model.Description)
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.InStock)
+        @Html.EditorFor(Model => Model.InStock)
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.Price)
+        @Html.EditorFor(Model => Model.Price)
+    </div>
+    <input type="submit" name="name" value="New product" />
+    }
 </body>
 </html>
