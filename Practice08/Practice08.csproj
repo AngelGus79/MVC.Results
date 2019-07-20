@@ -146,6 +146,7 @@
     <Content Include="Views\Home\Clients.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\DateTime.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\Client.cshtml" />
+    <Content Include="Views\Home\EditorTemplates\DateTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
