@@ -201,5 +201,26 @@ namespace Practice08.Controllers
 
         }
 
+        [HttpPost]
+        public ViewResult Products(Practice08.Models.Product Product)
+        {
+
+            ServiceProduct serviceProduct = new ServiceProduct();
+
+
+            ViewBag.Products = serviceProduct.getProducts();
+            return View(serviceProduct.getProduct());
+        }
+
+        [HttpGet]
+        public ViewResult Products()
+        {
+            ServiceProduct serviceProduct = new ServiceProduct();
+
+
+            ViewBag.Products = serviceProduct.getProducts();
+            return View(serviceProduct.getProduct());
+        }
+
     }
 }

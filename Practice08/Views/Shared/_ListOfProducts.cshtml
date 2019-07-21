@@ -1,0 +1,24 @@
+﻿@model List<Practice08.Models.Product>
+
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdProduct</th>
+                <th>Description</th>
+                <th>In Stock</th>
+                <th>Price</th>
+            </tr>
+        </tbody>
+        @foreach (var product in Model)
+        {
+            string InStock = product.InStock ? "Si" : "No";
+            <tr>
+                <td>@product.ProductId </td>
+                <td>@product.Description </td>
+                <td>@InStock </td>
+                <td>@product.Price.ToString("c") </td>
+            </tr>
+        }
+        </table>
+

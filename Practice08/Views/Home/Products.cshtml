@@ -1,0 +1,52 @@
+﻿@model Practice08.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Products</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    
+</head>
+<body>
+    @{ 
+        List<SelectListItem> options = new List<SelectListItem>()
+        {
+            new SelectListItem(){
+                Value = "0",
+                Text = "Si"
+            },
+
+            new SelectListItem()
+            {
+                Value = "1",
+                Text = "No"
+            }
+        };
+
+    }
+
+
+
+    <div> 
+      
+<span>Options: </span>
+        @Html.DropDownList("Options",options)
+
+        @using (Html.BeginForm("Products","Home",null,FormMethod.Post,new {@css = "form-group" }))
+        {
+            @Html.EditorForModel()
+    <input type="submit" name="name" id="submit" value="New product" />
+        }
+        @Html.Partial("_ListOfProducts",(List<Practice08.Models.Product>)ViewBag.Products)
+    </div>
+
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+</body>
+</html>

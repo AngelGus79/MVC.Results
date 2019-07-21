@@ -142,13 +142,15 @@
     <Content Include="Views\Example\GetProduct.cshtml" />
     <Content Include="Views\Example\GetProducts.cshtml" />
     <Content Include="Views\Home\Display.cshtml" />
-    <Content Include="Views\Home\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
     <Content Include="Views\Home\Clients.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\DateTime.cshtml" />
     <Content Include="Views\Home\DisplayTemplates\Client.cshtml" />
     <Content Include="Views\Home\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\EditorForModel.cshtml" />
+    <Content Include="Views\Shared\_ListOfProducts.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
